@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import slugify from 'slugify';
+import FEATURES from '../Features/Features';
 
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
@@ -8,12 +9,14 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     currency: 'USD'
   });
 
+// console.log(FEATURES);
+
 export default class EachCust extends Component {
     render() {
-        console.log(this.props)
-        const features = Object.keys(this.props.features).map((feature, idx) => {
+        
+        const features = Object.keys(FEATURES).map((feature, idx) => {
           const featureHash = feature + '-' + idx;
-          const options = this.props.features[feature].map(item => {
+          const options = FEATURES[feature].map(item => {
             const itemHash = slugify(JSON.stringify(item));
             return (
               <div key={itemHash} className="feature__item">
@@ -42,9 +45,9 @@ export default class EachCust extends Component {
           );
         });
        return(
-           <div>
+           <>
                {features}
-           </div>
+           </>
        ) 
     }
 }

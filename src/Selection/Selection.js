@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+// import FEATURES from '../Features/Features';
 
 export default class Selection extends Component{
     render(){
@@ -9,10 +10,7 @@ export default class Selection extends Component{
             currency: 'USD'
           });
 
-          const total = Object.keys(this.props.selected).reduce(
-            (acc, curr) => acc + this.props.selected[curr].cost,
-            0
-          );
+         
 
         const summary = Object.keys(this.props.selected).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
@@ -32,12 +30,7 @@ export default class Selection extends Component{
 
         return(
             <div>
-                {summary}
-                <div className="summary__total">
-                    <div className="summary__total__label">Total</div>
-                    
-            </div>
-                
+                {summary}   
             </div>
         )
     }
