@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import slugify from 'slugify';
 import FEATURES from '../Features/Features';
+import FeatureItem from '../featureItem/featureItem';
 
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
@@ -19,19 +20,13 @@ export default class EachCust extends Component {
           const options = FEATURES[feature].map(item => {
             const itemHash = slugify(JSON.stringify(item));
             return (
-              <div key={itemHash} className="feature__item">
-                <input
-                  type="radio"
-                  id={itemHash}
-                  className="feature__option"
-                  name={slugify(feature)}
-                  checked={item.name === this.props.newState.selected[feature].name}
-                  onChange={e => this.props.updateFeature(feature, item)}
-                />
-                <label htmlFor={itemHash} className="feature__label">
-                  {item.name} ({USCurrencyFormat.format(item.cost)})
-                </label>
-              </div>
+              <FeatureItem 
+                itemHash={itemHash}
+                item={item}
+                feature={feature}
+                updateFeature={this.props.updateFeature}
+
+              />
             );
           });
     
