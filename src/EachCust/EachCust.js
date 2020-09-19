@@ -5,10 +5,7 @@ import FEATURES from '../Features/Features';
 import FeatureItem from '../featureItem/featureItem';
 
 
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-  });
+
 
 // console.log(FEATURES);
 
@@ -17,10 +14,12 @@ export default class EachCust extends Component {
         
         const features = Object.keys(FEATURES).map((feature, idx) => {
           const featureHash = feature + '-' + idx;
-          const options = FEATURES[feature].map(item => {
+          const options = FEATURES[feature].map((item,i) => {
             const itemHash = slugify(JSON.stringify(item));
+            console.log(feature);
             return (
               <FeatureItem 
+                
                 itemHash={itemHash}
                 item={item}
                 feature={feature}
