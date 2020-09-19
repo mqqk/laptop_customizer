@@ -14,20 +14,19 @@ export default class TotalCost extends Component{
             0
           );
           
-        console.log(this.props.selected);
-        const summary = Object.keys(this.props.selected).map((feature,idx) => {
-              const selectedOption=this.props.selected[feature];
-          
-        return(
-            <div className="summary__option__cost">
-                {USCurrencyFormat.format(selectedOption.cost)}
-            </div>
-        )});
+        
+        
 
         return(
+            
+          <div className="summary__total">
+            <div className="summary__total__label">Total</div>
+              
+          
             <div className="summary__total__value">
                     {USCurrencyFormat.format(total)}
-                </div>
+            </div>
+          </div>
         )
 
         

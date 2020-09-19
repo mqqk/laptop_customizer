@@ -9,7 +9,7 @@ export default class YourCart extends Component{
     
     
     render(){
-        console.log(this.props.selected);
+        
         return(
         <section className="main__summary">
             <h2>Your Cart</h2>
