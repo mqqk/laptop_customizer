@@ -25,7 +25,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
                     id={this.props.itemHash}
                     className="feature__option"
                     name={slugify(this.props.feature)}
-                    checked={this.props.item === this.props.itemHash}
+                    checked={this.props.item.name === this.props.selected}
                     onChange={e => this.props.updateFeature(this.props.feature, this.props.item)}
                 />
             <label htmlFor={this.props.itemHash} className="feature__label">
