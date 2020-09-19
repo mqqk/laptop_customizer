@@ -14,7 +14,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     
       render(){
         // console.log(this.props.feature)
-        console.log(this.props);
+        // console.log(this.props);
         // console.log(this.props.itemHash)
         // console.log(this.props.newState)
           return(
@@ -22,6 +22,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
                 className="feature__item"
             >
                 <input
+                    
                     type="radio"
                     id={this.props.itemHash}
                     className="feature__option"
