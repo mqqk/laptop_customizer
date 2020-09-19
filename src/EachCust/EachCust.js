@@ -9,6 +9,8 @@ import FeatureItem from '../featureItem/featureItem';
 
 // console.log(FEATURES);
 
+// console.log(FEATURES);
+
 export default class EachCust extends Component {
     render() {
         

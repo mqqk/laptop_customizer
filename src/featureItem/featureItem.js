@@ -13,10 +13,10 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
     
       render(){
-        console.log(this.props.feature)
+        // console.log(this.props.feature)
         console.log(this.props);
-        console.log(this.props.itemHash)
-        console.log(this.props.newState)
+        // console.log(this.props.itemHash)
+        // console.log(this.props.newState)
           return(
             <div key={this.props.itemHash}                  
                 className="feature__item"
