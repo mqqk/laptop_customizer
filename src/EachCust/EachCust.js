@@ -16,7 +16,7 @@ export default class EachCust extends Component {
           const featureHash = feature + '-' + idx;
           const options = FEATURES[feature].map((item,i) => {
             const itemHash = slugify(JSON.stringify(item));
-            console.log(feature);
+            // console.log(feature);
             return (
               <FeatureItem 
                 
@@ -24,6 +24,7 @@ export default class EachCust extends Component {
                 item={item}
                 feature={feature}
                 updateFeature={this.props.updateFeature}
+                newState={this.props.newState.selected[feature].name}
 
               />
             );
