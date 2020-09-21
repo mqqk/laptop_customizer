@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Custom from './Custom/Custom';
+import MainCustom from './Custom/Custom';
 import YourCart from './YourCart/YourCart';
 
 // Normalizes string as a slug - a string that is safe to use
@@ -52,7 +52,7 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-            <Custom               
+            <MainCustom               
               newState={this.state}
               updateFeature={this.updateFeature}
             />
